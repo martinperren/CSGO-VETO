@@ -34,11 +34,11 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-     mapsLeft = 50;
     if (message.content.toLowerCase() === '!mapveto') {
         maps = 'dust2, cache, inferno, mirage, nuke, overpass, train';
         message.reply('Veto iniciado. Usa !veto (mapa) para banear uno de los siguientes: ' + maps);
         mapsLeft = maps.split(",").length;
+        message.reply(mapsLeft);
         allowBan=true;
     }
 });
