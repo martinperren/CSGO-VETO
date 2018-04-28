@@ -58,10 +58,7 @@ client.on('message', message => {
         mapsLeft = maps.split(",").length;
         if(mapsLeft==2)
         {
-             message.channel.send({embed: {
-  color: 3447003,
-  description: 'MAPA: +maps'
-}});
+      message.channel.sendEmbed({ color: 3447003, description: `Mapa: ${maps}` });
         }
     }
 });
@@ -75,11 +72,7 @@ client.on('message', message => {
         message.reply('Cache eliminado. Mapas disponibles: ' + maps);
         if(mapsLeft==2)
         {
-         message.channel.send({embed: {
-  color: 3447003,
-  description: 'MAPA: +maps'
-}});    
-            
+         message.channel.sendEmbed({ color: 3447003, description: `Mapa: ${maps}` });
         }
     }
 });
@@ -91,10 +84,7 @@ client.on('message', message => {
          message.reply('Mirage eliminado. Mapas disponibles: ' + maps);
         if(mapsLeft==2)
         {
-             message.channel.send({embed: {
-  color: 3447003,
-  description: 'MAPA: +maps'
-}});
+            message.channel.sendEmbed({ color: 3447003, description: `Mapa: ${maps}` });
         }
     }
 });
@@ -107,10 +97,7 @@ client.on('message', message => {
         mapsLeft = maps.split(",").length;
         if(mapsLeft==2)
         {
-         message.channel.send({embed: {
-  color: 3447003,
-  description: 'MAPA: +maps'
-}});
+            message.channel.sendEmbed({ color: 3447003, description: `Mapa: ${maps}` });
         }
     }
 });
@@ -124,10 +111,7 @@ client.on('message', message => {
         mapsLeft = maps.split(",").length;
         if(mapsLeft==2)
         {
-        message.channel.send({embed: {
-  color: 3447003,
-  description: 'MAPA: +maps'
-}});
+            message.channel.sendEmbed({ color: 3447003, description: `Mapa: ${maps}` });
         }
     }
 });
@@ -140,10 +124,7 @@ client.on('message', message => {
         mapsLeft = maps.split(",").length;
         if(mapsLeft==2)
         {
-          message.channel.send({embed: {
-  color: 3447003,
-  description: 'MAPA: +maps'
-}});
+            message.channel.sendEmbed({ color: 3447003, description: `Mapa: ${maps}` });
         }
     }
 });
@@ -156,10 +137,7 @@ client.on('message', message => {
         mapsLeft = maps.split(",").length;
         if(mapsLeft==2)
         {
-            message.channel.send({embed: {
-  color: 3447003,
- description: 'MAPA: +maps'
-}});
+            message.channel.sendEmbed({ color: 3447003, description: `Mapa: ${maps}` });
         }
     }
 });
