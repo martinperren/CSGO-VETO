@@ -65,7 +65,7 @@ client.on('message', message => {
 
 
 
-    if (message.content.toLowerCase() === '!veto cache' && maps.indexOf('cache')!= -1 && allowBan && allowPick) {
+    if (message.content.toLowerCase() === '!ban cache' && maps.indexOf('cache')!= -1 && allowBan && allowPick) {
         maps = maps.replace('cache, ', '');
         mapsLeft = maps.split(",").length;
         message.reply('Cache eliminado. Mapas disponibles: ' + maps);
@@ -80,7 +80,7 @@ client.on('message', message => {
 
 
 
-    if (message.content.toLowerCase() === '!veto mirage' && maps.indexOf('mirage')!= -1 && allowBan && allowPick) {
+    if (message.content.toLowerCase() === '!ban mirage' && maps.indexOf('mirage')!= -1 && allowBan && allowPick) {
         maps = maps.replace('mirage, ', '');
         mapsLeft = maps.split(",").length;
          message.reply('Mirage eliminado. Mapas disponibles: ' + maps);
@@ -96,7 +96,7 @@ client.on('message', message => {
 
 
 
-    if (message.content.toLowerCase() === '!veto nuke' && maps.indexOf('nuke')!= -1 && allowBan && allowPick) {
+    if (message.content.toLowerCase() === '!ban nuke' && maps.indexOf('nuke')!= -1 && allowBan && allowPick) {
         maps = maps.replace('nuke, ', '');
          message.reply('Nuke eliminado. Mapas disponibles: ' + maps);
         mapsLeft = maps.split(",").length;
@@ -113,7 +113,7 @@ client.on('message', message => {
 
 
 
-    if (message.content.toLowerCase() === '!veto overpass' && maps.indexOf('overpass')!= -1 && allowBan && allowPick) {
+    if (message.content.toLowerCase() === '!ban overpass' && maps.indexOf('overpass')!= -1 && allowBan && allowPick) {
         maps = maps.replace('overpass, ', '');
          message.reply('Overpass eliminado. Mapas disponibles: ' + maps);
         mapsLeft = maps.split(",").length;
@@ -129,7 +129,7 @@ client.on('message', message => {
 
 
 
-    if (message.content.toLowerCase() === '!veto train' && maps.indexOf('train')!= -1 && allowBan && allowPick) {
+    if (message.content.toLowerCase() === '!ban train' && maps.indexOf('train')!= -1 && allowBan && allowPick) {
         maps = maps.replace('train', '');
          message.reply('Train eliminado. Mapas disponibles: ' + maps);
         mapsLeft = maps.split(",").length;
@@ -145,7 +145,7 @@ client.on('message', message => {
 
 
 
-    if (message.content.toLowerCase() === '!veto inferno' && maps.indexOf('inferno')!= -1 && allowBan && allowPick) {
+    if (message.content.toLowerCase() === '!ban inferno' && maps.indexOf('inferno')!= -1 && allowBan && allowPick) {
         maps = maps.replace('inferno, ', '');
         message.reply('Inferno eliminado. Mapas disponibles: ' + maps);
         mapsLeft = maps.split(",").length;
