@@ -4,8 +4,8 @@ var maps;
 var mapsLeft;
 var allowBan = false;
 
-var items = ['cache','cobble','inferno','mirage','nuke','overpass','train'];
-var PFitems = ['cache','cobble','inferno','mirage','nuke','overpass','train','subzero','dust2','canals'];
+var items = ['cache','dust2','inferno','mirage','nuke','overpass','train'];
+var PFitems = ['cache','dust2','inferno','mirage','nuke','overpass','train','subzero','dust2','canals'];
 
 
 client.on('ready', () => {
@@ -30,7 +30,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content.toLowerCase() === '!activedutyveto') {
-        maps = 'cobble, cache, inferno, mirage, nuke, overpass, train';
+        maps = 'dust2, cache, inferno, mirage, nuke, overpass, train';
         message.reply('Active Duty Map Veto starting: Type !veto MapName to ban any of the following maps: ' + maps);
         mapsLeft = maps.split(",").length;
         allowBan=true;
@@ -47,9 +47,9 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    if (message.content.toLowerCase() === '!veto cobble' && maps.indexOf('cobble')!= -1 && allowBan) {
-        maps = maps.replace('cobble, ', '');
-        message.reply('Cobblestone removed. Maps left: ' + maps);
+    if (message.content.toLowerCase() === '!veto dust2' && maps.indexOf('dust2')!= -1 && allowBan) {
+        maps = maps.replace('dust2, ', '');
+        message.reply('Dust 2 removed. Maps left: ' + maps);
         mapsLeft = maps.split(",").length;
         if(mapsLeft==2)
         {
