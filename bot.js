@@ -4,7 +4,7 @@ var maps;
 var mapsLeft;
 var allowBan = false;
 
-var items = ['cache','dust2','inferno','mirage','nuke','overpass','train'];
+var items = ['dust2','cache','mirage','nuke','overpass','train','inferno'];
 var picked = [];
 var banned = [];
 
@@ -55,7 +55,7 @@ client.on('message', message => {
 client.on('message', message => {
     if (message.content.toLowerCase() === '!veto dust2' && maps.indexOf('dust2')!= -1 && allowBan) {
         maps = maps.delete('dust2');
-        remove(maps, 'dust2');
+        maps.splice(0, 1);
          message.reply('Dust 2 eliminado. Mapas disponibles: ' + maps);
         //mapsLeft = maps.split(",").length;
         mapsLeft = mapsLeft - 1;
