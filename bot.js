@@ -60,7 +60,7 @@ client.on('message', message => {
         {
              message.channel.send({embed: {
   color: 3447003,
-  description: '${maps}'
+  description: 'MAPA: +maps'
 }});
         }
     }
@@ -77,7 +77,7 @@ client.on('message', message => {
         {
          message.channel.send({embed: {
   color: 3447003,
-  description: '${maps}'
+  description: 'MAPA: +maps'
 }});    
             
         }
@@ -93,7 +93,7 @@ client.on('message', message => {
         {
              message.channel.send({embed: {
   color: 3447003,
-  description: '${maps}'
+  description: 'MAPA: +maps'
 }});
         }
     }
@@ -109,7 +109,7 @@ client.on('message', message => {
         {
          message.channel.send({embed: {
   color: 3447003,
-  description: '${maps}'
+  description: 'MAPA: +maps'
 }});
         }
     }
@@ -126,7 +126,7 @@ client.on('message', message => {
         {
         message.channel.send({embed: {
   color: 3447003,
-  description: '${maps}'
+  description: 'MAPA: +maps'
 }});
         }
     }
@@ -142,7 +142,7 @@ client.on('message', message => {
         {
           message.channel.send({embed: {
   color: 3447003,
-  description: '${maps}'
+  description: 'MAPA: +maps'
 }});
         }
     }
@@ -158,7 +158,7 @@ client.on('message', message => {
         {
             message.channel.send({embed: {
   color: 3447003,
-  description: '${maps}'
+ description: 'MAPA: +maps'
 }});
         }
     }
