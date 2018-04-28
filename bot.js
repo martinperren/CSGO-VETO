@@ -44,7 +44,8 @@ client.on('message', message => {
     if (message.content.toLowerCase() === '!bo1') {
         maps = 'dust2, cache, inferno, mirage, nuke, overpass, train';
         message.reply('Veto iniciado. Usa !veto (mapa) para banear uno de los siguientes: ' + maps);
-        mapsLeft = maps.split(",").length;
+        mapsLeft = 7;
+        //mapsLeft = maps.split(",").length;
         allowBan=true;
     }
 });
@@ -53,12 +54,14 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content.toLowerCase() === '!veto dust2' && maps.indexOf('dust2')!= -1 && allowBan) {
-        maps = maps.replace('dust2, ', '');
+        maps = maps.delete('dust2');
+        //maps = maps.replace('dust2, ', '');
          message.reply('Dust 2 eliminado. Mapas disponibles: ' + maps);
-        mapsLeft = maps.split(",").length;
+        //mapsLeft = maps.split(",").length;
+        mapsLeft = mapsLeft - 1;
         if(mapsLeft==2)
         {
-      message.channel.sendEmbed({ color: 3447003, description: `Mapa: ${maps}` });
+       message.channel.sendEmbed({ color: 3447003, description: `**Mapa:** ${maps}` });
         }
     }
 });
@@ -72,7 +75,7 @@ client.on('message', message => {
         message.reply('Cache eliminado. Mapas disponibles: ' + maps);
         if(mapsLeft==2)
         {
-         message.channel.sendEmbed({ color: 3447003, description: `Mapa: ${maps}` });
+          message.channel.sendEmbed({ color: 3447003, description: `**Mapa:** ${maps}` });
         }
     }
 });
@@ -84,7 +87,7 @@ client.on('message', message => {
          message.reply('Mirage eliminado. Mapas disponibles: ' + maps);
         if(mapsLeft==2)
         {
-            message.channel.sendEmbed({ color: 3447003, description: `Mapa: ${maps}` });
+            message.channel.sendEmbed({ color: 3447003, description: `**Mapa:** ${maps}` });
         }
     }
 });
@@ -97,7 +100,7 @@ client.on('message', message => {
         mapsLeft = maps.split(",").length;
         if(mapsLeft==2)
         {
-            message.channel.sendEmbed({ color: 3447003, description: `Mapa: ${maps}` });
+             message.channel.sendEmbed({ color: 3447003, description: `**Mapa:** ${maps}` });
         }
     }
 });
@@ -111,7 +114,7 @@ client.on('message', message => {
         mapsLeft = maps.split(",").length;
         if(mapsLeft==2)
         {
-            message.channel.sendEmbed({ color: 3447003, description: `Mapa: ${maps}` });
+            message.channel.sendEmbed({ color: 3447003, description: `**Mapa:** ${maps}` });
         }
     }
 });
@@ -124,7 +127,7 @@ client.on('message', message => {
         mapsLeft = maps.split(",").length;
         if(mapsLeft==2)
         {
-            message.channel.sendEmbed({ color: 3447003, description: `Mapa: ${maps}` });
+             message.channel.sendEmbed({ color: 3447003, description: `**Mapa:** ${maps}` });
         }
     }
 });
@@ -137,7 +140,7 @@ client.on('message', message => {
         mapsLeft = maps.split(",").length;
         if(mapsLeft==2)
         {
-            message.channel.sendEmbed({ color: 3447003, description: `Mapa: ${maps}` });
+             message.channel.sendEmbed({ color: 3447003, description: `**Mapa:** ${maps}` });
         }
     }
 });
