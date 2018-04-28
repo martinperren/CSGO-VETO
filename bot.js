@@ -83,7 +83,7 @@ client.on('message', message => {
         mapsLeft = maps.split(",").length;
         if(mapsLeft==2)
         {
-            message.reply("Mapa: " + maps);
+            message.reply("**Mapa:** " + maps);
         }
     }
 });
@@ -97,7 +97,7 @@ client.on('message', message => {
         message.reply('Cache eliminado. Mapas disponibles: ' + maps);
         if(mapsLeft==2)
         {
-            message.reply("Mapa: " + maps);
+            message.reply("**Mapa:** " + maps);
         }
     }
 });
@@ -109,7 +109,7 @@ client.on('message', message => {
          message.reply('Mirage eliminado. Mapas disponibles: ' + maps);
         if(mapsLeft==2)
         {
-            message.reply("Mapa: " + maps);
+            message.reply("**Mapa:** " + maps);
         }
     }
 });
@@ -122,7 +122,7 @@ client.on('message', message => {
         mapsLeft = maps.split(",").length;
         if(mapsLeft==2)
         {
-            message.reply("Mapa: " + maps);
+            message.reply("**Mapa:** " + maps);
         }
     }
 });
@@ -136,7 +136,7 @@ client.on('message', message => {
         mapsLeft = maps.split(",").length;
         if(mapsLeft==2)
         {
-            message.reply("Mapa: " + maps);
+            message.reply("**Mapa:** " + maps);
         }
     }
 });
@@ -149,7 +149,7 @@ client.on('message', message => {
         mapsLeft = maps.split(",").length;
         if(mapsLeft==2)
         {
-            message.reply("Mapa: " + maps);
+           message.reply("**Mapa:** " + maps);
         }
     }
 });
@@ -162,7 +162,7 @@ client.on('message', message => {
         mapsLeft = maps.split(",").length;
         if(mapsLeft==2)
         {
-           message.reply("Mapa: " + maps);
+           message.reply("**Mapa:** " + maps);
         }
     }
 });
