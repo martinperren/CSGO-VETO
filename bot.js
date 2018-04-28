@@ -148,7 +148,7 @@ client.on('message', message => {
         maps = maps.replace('train', '');
          message.reply('Train eliminado. Mapas disponibles: ' + maps);
         mapsLeft = maps.split(",").length;
-        if(mapsLeft=1)
+        if(mapsLeft==1)
         {
             message.reply("Mapa: " + maps);
         }
