@@ -5,6 +5,8 @@ var mapsLeft;
 var allowBan = false;
 
 var items = ['cache','dust2','inferno','mirage','nuke','overpass','train'];
+var picked = [];
+var banned = [];
 
 
 
@@ -25,6 +27,151 @@ client.on("guildDelete", guild => {
 
 
 
+
+
+
+
+client.on('message', message => {
+    
+    
+  
+    
+    
+    
+    if (message.content.toLowerCase() === '!bo3') {
+        maps = 'dust2, cache, inferno, mirage, nuke, overpass, train';
+        message.reply('Veto iniciado. Usa !veto (mapa) para banear uno de los siguientes: ' + maps);
+        mapsLeft = maps.split(",").length;
+        allowBan=true;
+        allowPick=true;
+    }
+
+
+
+    if (message.content.toLowerCase() === '!veto dust2' && maps.indexOf('dust2')!= -1 && allowBan && allowPick) {
+        maps = maps.replace('dust2, ', '');
+         message.reply('Dust 2 eliminado. Mapas disponibles: ' + maps);
+        mapsLeft = maps.split(",").length;
+        if(mapsLeft==2)
+        {
+             let sicon = message.guild.iconURL;
+    let serverembed = new Discord.RichEmbed()
+    .addField(maps, message.guild.name)
+    message.channel.send(serverembed); 
+        }
+    }
+
+
+
+
+
+    if (message.content.toLowerCase() === '!veto cache' && maps.indexOf('cache')!= -1 && allowBan && allowPick) {
+        maps = maps.replace('cache, ', '');
+        mapsLeft = maps.split(",").length;
+        message.reply('Cache eliminado. Mapas disponibles: ' + maps);
+        if(mapsLeft==2)
+        {
+             let sicon = message.guild.iconURL;
+    let serverembed = new Discord.RichEmbed()
+    .addField(maps, message.guild.name)
+    message.channel.send(serverembed); 
+        }
+    }
+
+
+
+    if (message.content.toLowerCase() === '!veto mirage' && maps.indexOf('mirage')!= -1 && allowBan && allowPick) {
+        maps = maps.replace('mirage, ', '');
+        mapsLeft = maps.split(",").length;
+         message.reply('Mirage eliminado. Mapas disponibles: ' + maps);
+        if(mapsLeft==2)
+        {
+             let sicon = message.guild.iconURL;
+    let serverembed = new Discord.RichEmbed()
+    .addField(maps, message.guild.name)
+    message.channel.send(serverembed); 
+        }
+    }
+
+
+
+
+    if (message.content.toLowerCase() === '!veto nuke' && maps.indexOf('nuke')!= -1 && allowBan && allowPick) {
+        maps = maps.replace('nuke, ', '');
+         message.reply('Nuke eliminado. Mapas disponibles: ' + maps);
+        mapsLeft = maps.split(",").length;
+        if(mapsLeft==2)
+        {
+             let sicon = message.guild.iconURL;
+    let serverembed = new Discord.RichEmbed()
+    .addField(maps, message.guild.name)
+    message.channel.send(serverembed); 
+        }
+    }
+
+
+
+
+
+    if (message.content.toLowerCase() === '!veto overpass' && maps.indexOf('overpass')!= -1 && allowBan && allowPick) {
+        maps = maps.replace('overpass, ', '');
+         message.reply('Overpass eliminado. Mapas disponibles: ' + maps);
+        mapsLeft = maps.split(",").length;
+        if(mapsLeft==2)
+        {
+             let sicon = message.guild.iconURL;
+    let serverembed = new Discord.RichEmbed()
+    .addField(maps, message.guild.name)
+    message.channel.send(serverembed); 
+        }
+    }
+
+
+
+
+    if (message.content.toLowerCase() === '!veto train' && maps.indexOf('train')!= -1 && allowBan && allowPick) {
+        maps = maps.replace('train', '');
+         message.reply('Train eliminado. Mapas disponibles: ' + maps);
+        mapsLeft = maps.split(",").length;
+        if(mapsLeft==2)
+        {
+            let sicon = message.guild.iconURL;
+    let serverembed = new Discord.RichEmbed()
+    .addField(maps, message.guild.name)
+    message.channel.send(serverembed); 
+        }
+    }
+
+
+
+
+    if (message.content.toLowerCase() === '!veto inferno' && maps.indexOf('inferno')!= -1 && allowBan && allowPick) {
+        maps = maps.replace('inferno, ', '');
+        message.reply('Inferno eliminado. Mapas disponibles: ' + maps);
+        mapsLeft = maps.split(",").length;
+        if(mapsLeft==2)
+        {
+           let sicon = message.guild.iconURL;
+    let serverembed = new Discord.RichEmbed()
+    .addField(maps, message.guild.name)
+    message.channel.send(serverembed); 
+        }
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////
+
+
 client.on('message', message => {
     if (message.content.toLowerCase() === '!mapsleft') {
         message.reply("Mapas disponibles: "+maps + " ("+(mapsLeft - 1)+")");
@@ -34,44 +181,12 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-    if (message.content.toLowerCase() === '!mapveto') {
+    if (message.content.toLowerCase() === '!bo1') {
         maps = 'dust2, cache, inferno, mirage, nuke, overpass, train';
         message.reply('Veto iniciado. Usa !veto (mapa) para banear uno de los siguientes: ' + maps);
         mapsLeft = maps.split(",").length;
         allowBan=true;
     }
-});
-
-
-
-
-
-client.on('message', message => {
-    if (message.content.startsWith("!cc")){
-        // Let's delete the command message, so it doesn't interfere with the messages we are going to delete.
-        // Now, we want to check if the user has the `bot-commander` role, you can change this to whatever you want.
-        if (!message.member.roles.some(r => ["OWNER", "Admins"].includes(r.name)))
-            return 0;
-        async function purge() {
-            message.delete(); // Let's delete the command message, so it doesn't interfere with the messages we are going to delete.
-            // Now, we want to check if the user has the `bot-commander` role, you can change this to whatever you want.
-            // We want to check if the argument is a number
-            if (isNaN(args[0])) {
-                // Sends a message to the channel.
-                message.channel.send('Pone un número despues del comando.'); //\n means new line.
-                // Cancels out of the script, so the rest doesn't run.
-                return;
-            }
-            const fetched = await message.channel.fetchMessages({limit: args[0]}); // This grabs the last number(args) of messages in the channel.
-            console.log(fetched.size + ' messages found, deleting...'); // Lets post into console how many messages we are deleting
-            // Deleting the messages
-            message.channel.bulkDelete(fetched);
-        }
-        // We want to make sure we call the function whenever the purge command is run.
-        purge(); // Make sure this is inside the if(msg.startsWith)
-        // We want to make sure we call the function whenever the purge command is run.
-    }
-
 });
 
 
@@ -176,6 +291,34 @@ client.on('message',message=> {
     }
 });
 
+
+client.on('message', message => {
+    if (message.content.startsWith("!cc")){
+        // Let's delete the command message, so it doesn't interfere with the messages we are going to delete.
+        // Now, we want to check if the user has the `bot-commander` role, you can change this to whatever you want.
+        if (!message.member.roles.some(r => ["OWNER", "Admins"].includes(r.name)))
+            return 0;
+        async function purge() {
+            message.delete(); // Let's delete the command message, so it doesn't interfere with the messages we are going to delete.
+            // Now, we want to check if the user has the `bot-commander` role, you can change this to whatever you want.
+            // We want to check if the argument is a number
+            if (isNaN(args[0])) {
+                // Sends a message to the channel.
+                message.channel.send('Pone un número despues del comando.'); //\n means new line.
+                // Cancels out of the script, so the rest doesn't run.
+                return;
+            }
+            const fetched = await message.channel.fetchMessages({limit: args[0]}); // This grabs the last number(args) of messages in the channel.
+            console.log(fetched.size + ' messages found, deleting...'); // Lets post into console how many messages we are deleting
+            // Deleting the messages
+            message.channel.bulkDelete(fetched);
+        }
+        // We want to make sure we call the function whenever the purge command is run.
+        purge(); // Make sure this is inside the if(msg.startsWith)
+        // We want to make sure we call the function whenever the purge command is run.
+    }
+
+});
 
 
 
