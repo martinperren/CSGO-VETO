@@ -44,8 +44,7 @@ client.on('message', message => {
     if (message.content.toLowerCase() === '!bo1') {
         maps = 'dust2, cache, inferno, mirage, nuke, overpass, train';
         message.reply('Veto iniciado. Usa !veto (mapa) para banear uno de los siguientes: ' + maps);
-        mapsLeft = 7;
-        //mapsLeft = maps.split(",").length;
+        mapsLeft = maps.split(",").length;
         allowBan=true;
     }
 });
@@ -54,11 +53,9 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content.toLowerCase() === '!veto dust2' && maps.indexOf('dust2')!= -1 && allowBan) {
-        maps = maps.delete('dust2');
-        maps.splice(0, 1);
+        maps = maps.replace('dust2, ', '');
+        mapsLeft = maps.split(",").length;
          message.reply('Dust 2 eliminado. Mapas disponibles: ' + maps);
-        //mapsLeft = maps.split(",").length;
-        mapsLeft = mapsLeft - 1;
         if(mapsLeft==2)
         {
        message.channel.sendEmbed({ color: 3447003, description: `**Mapa:** ${maps}` });
