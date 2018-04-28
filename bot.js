@@ -38,7 +38,6 @@ client.on('message', message => {
         maps = 'dust2, cache, inferno, mirage, nuke, overpass, train';
         message.reply('Veto iniciado. Usa !veto (mapa) para banear uno de los siguientes: ' + maps);
         mapsLeft = maps.split(",").length;
-        message.reply(mapsLeft);
         allowBan=true;
     }
 });
