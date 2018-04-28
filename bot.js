@@ -82,7 +82,7 @@ client.on('message', message => {
         maps = maps.replace('dust2, ', '');
          message.reply('Dust 2 eliminado. Mapas disponibles: ' + maps);
         mapsLeft = maps.split(",").length;
-        if(mapsLeft==1)
+        if(mapsLeft==2)
         {
             message.reply("Mapa: " + maps);
         }
@@ -96,7 +96,7 @@ client.on('message', message => {
         maps = maps.replace('cache, ', '');
         mapsLeft = maps.split(",").length;
         message.reply('Cache eliminado. Mapas disponibles: ' + maps);
-        if(mapsLeft==1)
+        if(mapsLeft==2)
         {
             message.reply("Mapa: " + maps);
         }
@@ -108,7 +108,7 @@ client.on('message', message => {
         maps = maps.replace('mirage, ', '');
         mapsLeft = maps.split(",").length;
          message.reply('Mirage eliminado. Mapas disponibles: ' + maps);
-        if(mapsLeft==1)
+        if(mapsLeft==2)
         {
             message.reply("Mapa: " + maps);
         }
@@ -121,7 +121,7 @@ client.on('message', message => {
         maps = maps.replace('nuke, ', '');
          message.reply('Nuke eliminado. Mapas disponibles: ' + maps);
         mapsLeft = maps.split(",").length;
-        if(mapsLeft==1)
+        if(mapsLeft==2)
         {
             message.reply("Mapa: " + maps);
         }
@@ -135,7 +135,7 @@ client.on('message', message => {
         maps = maps.replace('overpass, ', '');
          message.reply('Overpass eliminado. Mapas disponibles: ' + maps);
         mapsLeft = maps.split(",").length;
-        if(mapsLeft==1)
+        if(mapsLeft==2)
         {
             message.reply("Mapa: " + maps);
         }
@@ -148,7 +148,7 @@ client.on('message', message => {
         maps = maps.replace('train', '');
          message.reply('Train eliminado. Mapas disponibles: ' + maps);
         mapsLeft = maps.split(",").length;
-        if(mapsLeft==1)
+        if(mapsLeft==2)
         {
             message.reply("Mapa: " + maps);
         }
@@ -161,7 +161,7 @@ client.on('message', message => {
         maps = maps.replace('inferno, ', '');
         message.reply('Inferno eliminado. Mapas disponibles: ' + maps);
         mapsLeft = maps.split(",").length;
-        if(mapsLeft==1)
+        if(mapsLeft==2)
         {
            message.reply("Mapa: " + maps);
         }
