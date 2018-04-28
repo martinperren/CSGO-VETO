@@ -29,146 +29,6 @@ client.on("guildDelete", guild => {
 
 
 
-
-
-client.on('message', message => {
-    
-    
-  
-    
-    
-    
-    if (message.content.toLowerCase() === '!bo3') {
-        maps = 'dust2, cache, inferno, mirage, nuke, overpass, train';
-        message.reply('Veto iniciado. Usa !veto (mapa) para banear uno de los siguientes: ' + maps);
-        mapsLeft = maps.split(",").length;
-        allowBan=true;
-        allowPick=true;
-    }
-
-
-
-    if (message.content.toLowerCase() === '!veto dust2' && maps.indexOf('dust2')!= -1 && allowBan && allowPick) {
-        maps = maps.replace('dust2, ', '');
-         message.reply('Dust 2 eliminado. Mapas disponibles: ' + maps);
-        mapsLeft = maps.split(",").length;
-        if(mapsLeft==2)
-        {
-             let sicon = message.guild.iconURL;
-    let serverembed = new Discord.RichEmbed()
-    .addField(maps, message.guild.name)
-    message.channel.send(serverembed); 
-        }
-    }
-
-
-
-
-
-    if (message.content.toLowerCase() === '!ban cache' && maps.indexOf('cache')!= -1 && allowBan && allowPick) {
-        maps = maps.replace('cache, ', '');
-        mapsLeft = maps.split(",").length;
-        message.reply('Cache eliminado. Mapas disponibles: ' + maps);
-        if(mapsLeft==2)
-        {
-             let sicon = message.guild.iconURL;
-    let serverembed = new Discord.RichEmbed()
-    .addField(maps, message.guild.name)
-    message.channel.send(serverembed); 
-        }
-    }
-
-
-
-    if (message.content.toLowerCase() === '!ban mirage' && maps.indexOf('mirage')!= -1 && allowBan && allowPick) {
-        maps = maps.replace('mirage, ', '');
-        mapsLeft = maps.split(",").length;
-         message.reply('Mirage eliminado. Mapas disponibles: ' + maps);
-        if(mapsLeft==2)
-        {
-             let sicon = message.guild.iconURL;
-    let serverembed = new Discord.RichEmbed()
-    .addField(maps, message.guild.name)
-    message.channel.send(serverembed); 
-        }
-    }
-
-
-
-
-    if (message.content.toLowerCase() === '!ban nuke' && maps.indexOf('nuke')!= -1 && allowBan && allowPick) {
-        maps = maps.replace('nuke, ', '');
-         message.reply('Nuke eliminado. Mapas disponibles: ' + maps);
-        mapsLeft = maps.split(",").length;
-        if(mapsLeft==2)
-        {
-             let sicon = message.guild.iconURL;
-    let serverembed = new Discord.RichEmbed()
-    .addField(maps, message.guild.name)
-    message.channel.send(serverembed); 
-        }
-    }
-
-
-
-
-
-    if (message.content.toLowerCase() === '!ban overpass' && maps.indexOf('overpass')!= -1 && allowBan && allowPick) {
-        maps = maps.replace('overpass, ', '');
-         message.reply('Overpass eliminado. Mapas disponibles: ' + maps);
-        mapsLeft = maps.split(",").length;
-        if(mapsLeft==2)
-        {
-             let sicon = message.guild.iconURL;
-    let serverembed = new Discord.RichEmbed()
-    .addField(maps, message.guild.name)
-    message.channel.send(serverembed); 
-        }
-    }
-
-
-
-
-    if (message.content.toLowerCase() === '!ban train' && maps.indexOf('train')!= -1 && allowBan && allowPick) {
-        maps = maps.replace('train', '');
-         message.reply('Train eliminado. Mapas disponibles: ' + maps);
-        mapsLeft = maps.split(",").length;
-        if(mapsLeft==2)
-        {
-            let sicon = message.guild.iconURL;
-    let serverembed = new Discord.RichEmbed()
-    .addField(maps, message.guild.name)
-    message.channel.send(serverembed); 
-        }
-    }
-
-
-
-
-    if (message.content.toLowerCase() === '!ban inferno' && maps.indexOf('inferno')!= -1 && allowBan && allowPick) {
-        maps = maps.replace('inferno, ', '');
-        message.reply('Inferno eliminado. Mapas disponibles: ' + maps);
-        mapsLeft = maps.split(",").length;
-        if(mapsLeft==2)
-        {
-           let sicon = message.guild.iconURL;
-    let serverembed = new Discord.RichEmbed()
-    .addField(maps, message.guild.name)
-    message.channel.send(serverembed); 
-        }
-    }
-});
-
-
-
-
-
-
-
-
-
-
-
 ///////////////////////////////////////////////////
 
 
@@ -198,7 +58,10 @@ client.on('message', message => {
         mapsLeft = maps.split(",").length;
         if(mapsLeft==2)
         {
-            message.reply("**Mapa:** " + maps);
+             let sicon = message.guild.iconURL;
+    let serverembed = new Discord.RichEmbed()
+    .addField(maps, message.guild.name)
+    message.channel.send(serverembed); 
         }
     }
 });
@@ -212,7 +75,10 @@ client.on('message', message => {
         message.reply('Cache eliminado. Mapas disponibles: ' + maps);
         if(mapsLeft==2)
         {
-            message.reply("**Mapa:** " + maps);
+             let sicon = message.guild.iconURL;
+    let serverembed = new Discord.RichEmbed()
+    .addField(maps, message.guild.name)
+    message.channel.send(serverembed); 
         }
     }
 });
@@ -224,7 +90,10 @@ client.on('message', message => {
          message.reply('Mirage eliminado. Mapas disponibles: ' + maps);
         if(mapsLeft==2)
         {
-            message.reply("**Mapa:** " + maps);
+             let sicon = message.guild.iconURL;
+    let serverembed = new Discord.RichEmbed()
+    .addField(maps, message.guild.name)
+    message.channel.send(serverembed); 
         }
     }
 });
@@ -237,7 +106,10 @@ client.on('message', message => {
         mapsLeft = maps.split(",").length;
         if(mapsLeft==2)
         {
-            message.reply("**Mapa:** " + maps);
+            let sicon = message.guild.iconURL;
+    let serverembed = new Discord.RichEmbed()
+    .addField(maps, message.guild.name)
+    message.channel.send(serverembed); 
         }
     }
 });
@@ -251,7 +123,10 @@ client.on('message', message => {
         mapsLeft = maps.split(",").length;
         if(mapsLeft==2)
         {
-            message.reply("**Mapa:** " + maps);
+             let sicon = message.guild.iconURL;
+    let serverembed = new Discord.RichEmbed()
+    .addField(maps, message.guild.name)
+    message.channel.send(serverembed); 
         }
     }
 });
@@ -264,7 +139,10 @@ client.on('message', message => {
         mapsLeft = maps.split(",").length;
         if(mapsLeft==2)
         {
-           message.reply("**Mapa:** " + maps);
+            let sicon = message.guild.iconURL;
+    let serverembed = new Discord.RichEmbed()
+    .addField(maps, message.guild.name)
+    message.channel.send(serverembed); 
         }
     }
 });
@@ -277,7 +155,10 @@ client.on('message', message => {
         mapsLeft = maps.split(",").length;
         if(mapsLeft==2)
         {
-           message.reply("**Mapa:** " + maps);
+            let sicon = message.guild.iconURL;
+    let serverembed = new Discord.RichEmbed()
+    .addField(maps, message.guild.name)
+    message.channel.send(serverembed); 
         }
     }
 });
