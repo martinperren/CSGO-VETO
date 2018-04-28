@@ -55,7 +55,7 @@ client.on('message', message => {
 client.on('message', message => {
     if (message.content.toLowerCase() === '!veto dust2' && maps.indexOf('dust2')!= -1 && allowBan) {
         maps = maps.delete('dust2');
-        //maps = maps.replace('dust2, ', '');
+        remove(maps, 'dust2');
          message.reply('Dust 2 eliminado. Mapas disponibles: ' + maps);
         //mapsLeft = maps.split(",").length;
         mapsLeft = mapsLeft - 1;
