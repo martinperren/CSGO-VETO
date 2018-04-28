@@ -58,10 +58,10 @@ client.on('message', message => {
         mapsLeft = maps.split(",").length;
         if(mapsLeft==2)
         {
-             let sicon = message.guild.iconURL;
-    let serverembed = new Discord.RichEmbed()
-    .addField(maps, message.guild.name)
-    message.channel.send(serverembed); 
+             message.channel.send({embed: {
+  color: 3447003,
+  description: '${maps}'
+}});
         }
     }
 });
@@ -75,10 +75,11 @@ client.on('message', message => {
         message.reply('Cache eliminado. Mapas disponibles: ' + maps);
         if(mapsLeft==2)
         {
-             let sicon = message.guild.iconURL;
-    let serverembed = new Discord.RichEmbed()
-    .addField(maps, message.guild.name)
-    message.channel.send(serverembed); 
+         message.channel.send({embed: {
+  color: 3447003,
+  description: '${maps}'
+}});    
+            
         }
     }
 });
@@ -90,10 +91,10 @@ client.on('message', message => {
          message.reply('Mirage eliminado. Mapas disponibles: ' + maps);
         if(mapsLeft==2)
         {
-             let sicon = message.guild.iconURL;
-    let serverembed = new Discord.RichEmbed()
-    .addField(maps, message.guild.name)
-    message.channel.send(serverembed); 
+             message.channel.send({embed: {
+  color: 3447003,
+  description: '${maps}'
+}});
         }
     }
 });
@@ -106,10 +107,10 @@ client.on('message', message => {
         mapsLeft = maps.split(",").length;
         if(mapsLeft==2)
         {
-            let sicon = message.guild.iconURL;
-    let serverembed = new Discord.RichEmbed()
-    .addField(maps, message.guild.name)
-    message.channel.send(serverembed); 
+         message.channel.send({embed: {
+  color: 3447003,
+  description: '${maps}'
+}});
         }
     }
 });
@@ -123,10 +124,10 @@ client.on('message', message => {
         mapsLeft = maps.split(",").length;
         if(mapsLeft==2)
         {
-             let sicon = message.guild.iconURL;
-    let serverembed = new Discord.RichEmbed()
-    .addField(maps, message.guild.name)
-    message.channel.send(serverembed); 
+        message.channel.send({embed: {
+  color: 3447003,
+  description: '${maps}'
+}});
         }
     }
 });
@@ -139,10 +140,10 @@ client.on('message', message => {
         mapsLeft = maps.split(",").length;
         if(mapsLeft==2)
         {
-            let sicon = message.guild.iconURL;
-    let serverembed = new Discord.RichEmbed()
-    .addField(maps, message.guild.name)
-    message.channel.send(serverembed); 
+          message.channel.send({embed: {
+  color: 3447003,
+  description: '${maps}'
+}});
         }
     }
 });
@@ -155,10 +156,10 @@ client.on('message', message => {
         mapsLeft = maps.split(",").length;
         if(mapsLeft==2)
         {
-            let sicon = message.guild.iconURL;
-    let serverembed = new Discord.RichEmbed()
-    .addField(maps, message.guild.name)
-    message.channel.send(serverembed); 
+            message.channel.send({embed: {
+  color: 3447003,
+  description: '${maps}'
+}});
         }
     }
 });
