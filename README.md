@@ -1,3 +1,3 @@
-CSGO-VETO BOT. 
-Under development.
+CSGO-VETO BOT ESP.
+
 
