@@ -25,13 +25,13 @@ var webhook = process.env.WEBHOOK;
 
 client.on("ready", () => {
     console.log(`Bot iniciado ${client.users.size} usuarios en ${client.channels.size} canales.`);
-	client.user.setGame("Testing");	
+	client.user.UpdatePresence();
 	//client.user.setGame(process.env.GAME);
 
 });
 client.on("guildCreate", guild => {
     console.log(`Nuevo guild: ${guild.name} (id: ${guild.id}). Este guild tiene ${guild.memberCount} miembros.`);
-	client.user.setGame("Testing");	
+	client.user.UpdatePresence();
 	//client.user.setGame(process.env.GAME);
    
 	
@@ -207,6 +207,25 @@ function play(guild, song) {
 
 
 
+ static void UpdatePresence()
+    {
+        DiscordRichPresence discordPresence;
+        memset(&discordPresence, 0, sizeof(discordPresence));
+        discordPresence.state = "Haciendo petes";
+        discordPresence.details = "Orgia";
+        discordPresence.startTimestamp = 1507665886;
+        discordPresence.endTimestamp = 1507665887;
+        discordPresence.largeImageText = "Numbani";
+        discordPresence.smallImageText = "Rogue - Level 100";
+        discordPresence.partyId = "ae488379-351d-4a4f-ad32-2b9b01c91657";
+        discordPresence.partySize = 1;
+        discordPresence.partyMax = 5;
+        discordPresence.spectateSecret = "MTIzNDV8MTIzNDV8MTMyNDU0";
+        discordPresence.joinSecret = "MTI4NzM0OjFpMmhuZToxMjMxMjM= ";
+        Discord_UpdatePresence(&discordPresence);
+    }
+
+
 
 //   COMANDOS   //   COMANDOS   //   COMANDOS   //   COMANDOS   //   COMANDOS   //   COMANDOS   //   COMANDOS   //   COMANDOS   //   COMANDOS   
  
@@ -229,7 +248,7 @@ if (message.content.includes("huevo")) {
  
  
   
-    if (message.content.startsWith("!say2")){
+    if (message.content.startsWith("&say")){
         if (!message.member.roles.some(r => roles.includes(r.name)))
             return 0;
         const sayMessage = args.join(" ");
@@ -241,7 +260,7 @@ if (message.content.includes("huevo")) {
 	
 
 	//Si se buggea el bot, para sacarlo del canal de voz.
-	if (message.content.startsWith("!quit2")){
+	if (message.content.startsWith("&quit")){
         message.member.voiceChannel.leave();
 	message.delete();
 	}
@@ -250,7 +269,7 @@ if (message.content.includes("huevo")) {
 	
 	
 	
-    if (message.content.startsWith("!play2")){
+    if (message.content.startsWith("&play")){
         const voiceChannel = message.member.voiceChannel;
         if (!voiceChannel)
             return message.channel.send('Metete en en canal de voz, crack!');
@@ -302,7 +321,7 @@ Pone un numero de 1-10.
             return handleVideo(video, message, voiceChannel);
         }
     }
-   if (message.content.startsWith("!skip2")){
+   if (message.content.startsWith("&skip")){
         if (!message.member.voiceChannel)
             return message.channel.send('Ingresa en un canal de voz!');
         if (!serverQueue)
@@ -311,7 +330,7 @@ Pone un numero de 1-10.
         return undefined;
     }
 	 
-    if (message.content.startsWith("!stop2")){
+    if (message.content.startsWith("&stop")){
         if (!message.member.voiceChannel)
             return message.channel.send('Ingresa en un canal de voz!');
         if (!serverQueue)
@@ -320,7 +339,7 @@ Pone un numero de 1-10.
         serverQueue.connection.dispatcher.end('Reproducción detenida.');
         return undefined;
     }
-    if (message.content.startsWith("!vol2")){
+    if (message.content.startsWith("&vol")){
         if (!message.member.voiceChannel)
             return message.channel.send('Ingresa en un canal de voz!');
         if (!serverQueue)
@@ -336,7 +355,7 @@ Pone un numero de 1-10.
             return message.channel.send('No hay nada reproduciendose.');
         return message.channel.send(`Reproduciendo: **${serverQueue.songs[0].title}**`);
     }
-   if (message.content.startsWith("!list2")){
+   if (message.content.startsWith("&list")){
         if (!serverQueue)
             return message.channel.send('No hay nada reproduciendose.');
         return message.channel.send(`
@@ -345,7 +364,7 @@ ${serverQueue.songs.map(song => `**-** ${song.title}`).join('\n')}
 **Now playing:** ${serverQueue.songs[0].title}
 		`);
     }
-    if (message.content.startsWith("!pause2")){
+    if (message.content.startsWith("&pause")){
         if (serverQueue && serverQueue.playing) {
             serverQueue.playing = false;
             serverQueue.connection.dispatcher.pause();
@@ -353,7 +372,7 @@ ${serverQueue.songs.map(song => `**-** ${song.title}`).join('\n')}
         }
         return message.channel.send('No hay nada reproduciendose.');
     }
-    if (message.content.startsWith("!resume2")){
+    if (message.content.startsWith("&resume")){
         if (serverQueue && !serverQueue.playing) {
             serverQueue.playing = true;
             serverQueue.connection.dispatcher.resume();
@@ -361,14 +380,14 @@ ${serverQueue.songs.map(song => `**-** ${song.title}`).join('\n')}
         }
         return message.channel.send('No hay nada reproduciendose.');
     }
-    if (message.content.startsWith("!music2")){
+    if (message.content.startsWith("&music")){
         return message.reply("\n!play (nombre/link/playlist) - reproduce o agrega a la lista\n!skip - salta la cancion\n!stop - para la musica\n!vol (1-10) - cambia el volumen\n!song - nombre de la cancion\n!list - muestra la lista de reproduccion\n!pause - pausa la reproduccion\n!resume - reanuda la reproduccion\n!quit - saca al bot del canal (en caso de bug)");
     }
 	
 	
 	 
 	 
-	if (message.content.startsWith("!uptime2")){
+	if (message.content.startsWith("&uptime")){
 	 if (!message.member.roles.some(r => roles.includes(r.name)))
             return 0;
 message.delete();
@@ -382,32 +401,6 @@ message.channel.send(`__**BOT UPTIME:**__ ${days} DIAS ${hrs} HS ${mins} MINS`);
 	
 	
 
-	
-	
-	
-
-	
-	
-	
-	
-	
-		
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-	
-	
 	
 	
 	
