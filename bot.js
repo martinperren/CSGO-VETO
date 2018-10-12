@@ -25,13 +25,13 @@ var webhook = process.env.WEBHOOK;
 
 client.on("ready", () => {
     console.log(`Bot iniciado ${client.users.size} usuarios en ${client.channels.size} canales.`);
-	client.user.UpdatePresence();
+	client.user.setGame("CON RICKY");	
 	//client.user.setGame(process.env.GAME);
 
 });
 client.on("guildCreate", guild => {
     console.log(`Nuevo guild: ${guild.name} (id: ${guild.id}). Este guild tiene ${guild.memberCount} miembros.`);
-	client.user.UpdatePresence();
+	client.user.setGame("CON RICKY");	
 	//client.user.setGame(process.env.GAME);
    
 	
@@ -205,25 +205,6 @@ function play(guild, song) {
     serverQueue.textChannel.send(`Reproduciendo: **${song.title}**`);
 }
 
-
-
- static void UpdatePresence()
-    {
-        DiscordRichPresence discordPresence;
-        memset(&discordPresence, 0, sizeof(discordPresence));
-        discordPresence.state = "Haciendo petes";
-        discordPresence.details = "Orgia";
-        discordPresence.startTimestamp = 1507665886;
-        discordPresence.endTimestamp = 1507665887;
-        discordPresence.largeImageText = "Numbani";
-        discordPresence.smallImageText = "Rogue - Level 100";
-        discordPresence.partyId = "ae488379-351d-4a4f-ad32-2b9b01c91657";
-        discordPresence.partySize = 1;
-        discordPresence.partyMax = 5;
-        discordPresence.spectateSecret = "MTIzNDV8MTIzNDV8MTMyNDU0";
-        discordPresence.joinSecret = "MTI4NzM0OjFpMmhuZToxMjMxMjM= ";
-        Discord_UpdatePresence(&discordPresence);
-    }
 
 
 
@@ -401,8 +382,6 @@ message.channel.send(`__**BOT UPTIME:**__ ${days} DIAS ${hrs} HS ${mins} MINS`);
 	
 	
 
-	
-	
 	
 	
 });
