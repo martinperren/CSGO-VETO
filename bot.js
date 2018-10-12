@@ -25,16 +25,18 @@ var webhook = process.env.WEBHOOK;
 
 client.on("ready", () => {
     console.log(`Bot iniciado ${client.users.size} usuarios en ${client.channels.size} canales.`);
-	client.user.setGame("CON RICKY");	
-	//client.user.setGame(process.env.GAME);
+	
+	client.user.setActivity(process.env.GAME, { type: 'WATCHING' })
+  .then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
+  .catch(console.error);
 
 });
 client.on("guildCreate", guild => {
     console.log(`Nuevo guild: ${guild.name} (id: ${guild.id}). Este guild tiene ${guild.memberCount} miembros.`);
-	client.user.setGame("CON RICKY");	
-	//client.user.setGame(process.env.GAME);
-   
 	
+	client.user.setActivity(process.env.GAME, { type: 'WATCHING' })
+  .then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
+  .catch(console.error);
 		
 });
 
