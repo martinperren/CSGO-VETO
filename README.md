@@ -1,3 +1,0 @@
-CSGO-VETO BOT ESP.
-
-
