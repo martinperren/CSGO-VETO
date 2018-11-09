@@ -333,7 +333,7 @@ Pone un numero de 1-10.
         serverQueue.connection.dispatcher.setVolumeLogarithmic(argsM[1] / 5);
         return message.channel.send(`Volumen actual: **${argsM[1]}**`);
     }
-    if (message.content.startsWith("!song2")){
+    if (message.content.startsWith("&song")){
         if (!serverQueue)
             return message.channel.send('No hay nada reproduciendose.');
         return message.channel.send(`Reproduciendo: **${serverQueue.songs[0].title}**`);
