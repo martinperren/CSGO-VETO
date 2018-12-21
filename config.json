@@ -11,7 +11,7 @@
       "receivers": [
         {
           "nickname": "Tuber",
-          "customMessage": "Che @everyone! Tuber está en vivo en Twitch!",
+          "customMessage": "Tuber está en vivo en Twitch!",
 		  "url": "https://www.twitch.tv/tubergg"
 		  
         }
@@ -24,7 +24,7 @@
       "receivers": [
         {
           "nickname": "Benex",
-          "customMessage": "Che @everyone! Benex está en vivo en Twitch!",
+          "customMessage": "Benex está en vivo en Twitch!",
 		  "url": "https://www.twitch.tv/benex_rs"
         }
       ]
@@ -36,7 +36,7 @@
       "receivers": [
         {
           "nickname": "Matishi",
-          "customMessage": "Che @everyone! Matishi está en vivo en Twitch!",
+          "customMessage": "Matishi está en vivo en Twitch!",
 		  "url": "https://www.twitch.tv/matishi"
         }
       ]
@@ -49,7 +49,7 @@
       "receivers": [
         {
           "nickname": "Heitren",
-          "customMessage": "Che @everyone! Heitren está en vivo en Twitch!",
+          "customMessage": "Heitren está en vivo en Twitch!",
 		  "url": "https://www.twitch.tv/heitren_box"
         }
       ]
@@ -63,7 +63,7 @@
       "receivers": [
         {
           "nickname": "Merodeador",
-          "customMessage": "Che @everyone! Moderador está en vivo en Twitch!",
+          "customMessage": "Moderador está en vivo en Twitch!",
 		  "url": "https://www.twitch.tv/panchocaccio"
         }
       ]
@@ -74,7 +74,7 @@
       "receivers": [
         {
           "nickname": "Flash",
-          "customMessage": "Che @everyone! Flash está en vivo en Twitch!",
+          "customMessage": "Flash está en vivo en Twitch!",
 		  "url": "https://www.twitch.tv/flashrockmann"
         }
       ]
@@ -86,7 +86,7 @@
       "receivers": [
         {
           "nickname": "Sntgx",
-          "customMessage": "Che @everyone! El Cabe, si, EL CABE! está en vivo en Twitch!",
+          "customMessage": "El Cabe, si, EL CABE! está en vivo en Twitch!",
 		  "url": "https://www.twitch.tv/sntgx"
         }
       ]
