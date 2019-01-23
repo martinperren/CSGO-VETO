@@ -224,7 +224,7 @@ client.on("message", async message => {
     const serverQueue = queue.get(message.guild.id);
    
 if (message.content.includes("huevo")) {
-        message.react(client.emojis.get("430508228976181248"));
+        message.react(client.emojis.get("537716691803570236"));
     }
 	
 
