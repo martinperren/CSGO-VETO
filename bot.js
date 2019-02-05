@@ -241,6 +241,75 @@ if (message.content.includes("huevo")) {
     }
 	
 	
+	
+	
+	// BIG 
+
+	function isSpace(aChar){ 
+      myCharCode = aChar.charCodeAt(0);
+   
+      if(((myCharCode >  8) && (myCharCode < 14)) ||
+         (myCharCode == 32))
+      {
+         return true;
+      }
+   
+      return false;
+   }
+   
+   function isNumber(input) {
+    return !isNaN(input);
+}
+	
+	
+	 if (message.content.startsWith("!big")){
+        if (!message.member.roles.some(r => roles.includes(r.name)))
+            return 0;
+        const sayMessage = args.join(" ");
+		 let arr = Array.from(sayMessage.toLowerCase());
+		 var salida = "";
+		 var tam = arr.length;
+           var i;
+	for (i = 0; i < tam; i++) {
+    if(isSpace(arr[i])){
+		salida = salida + "   ";	        
+	}else{
+	}if(isNumber(arr[i])){
+	
+	if(arr[i]=="0") salida= salida + ":zero:";
+	if(arr[i]=="1") salida= salida + ":one:";
+	if(arr[i]=="2") salida= salida + ":two:";
+	if(arr[i]=="3") salida= salida + ":three:";
+	if(arr[i]=="4") salida= salida + ":four:";
+	if(arr[i]=="5") salida= salida + ":five:";
+	if(arr[i]=="6") salida= salida + ":six:";
+	if(arr[i]=="7") salida= salida + ":seven:";
+	if(arr[i]=="8") salida= salida + ":eight:";
+	if(arr[i]=="9") salida= salida + ":nine:";
+	
+	
+}else{
+	salida= salida + ":regional_indicator_"+arr[i]+":";   
+	
+}
+		
+	
+    }	 
+        message.delete().catch(O_o => {
+        });
+        message.channel.send(salida.toString());
+    }
+	
+	
+	
+	//BIG
+	
+	
+	
+	
+	
+	
+	
 
 	//Si se buggea el bot, para sacarlo del canal de voz.
 	if (message.content.startsWith("&quit")){
