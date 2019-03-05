@@ -230,7 +230,13 @@ if (message.content.includes("huevo")) {
 	
 
  
- 
+ if (message.content.startsWith("&ping")){
+        const m = await message.channel.send("Ping?");
+        m.edit(`Tu ping es de ${m.createdTimestamp - message.createdTimestamp}ms. API ping: ${Math.round(client.ping)}ms`);
+    }
+	
+	
+	
   
     if (message.content.startsWith("&say")){
         if (!message.member.roles.some(r => roles.includes(r.name)))
