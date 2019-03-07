@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const Client = require('node-rest-client').Client;
-const ytdl = require('ytdl-core');
+const ytdl = require('ytdl-core-discord');
 const twitch = require('twitch.tv');
 const jsonfile = require('jsonfile');
 const schedule = require('node-schedule');
@@ -186,7 +186,7 @@ async function handleVideo(video, message, voiceChannel, playlist = false) {
     }
     return undefined;
 }
-function play(guild, song) {
+async function play(guild, song) {
     const serverQueue = queue.get(guild.id);
     if (!song) {
         serverQueue.voiceChannel.leave();
@@ -194,7 +194,7 @@ function play(guild, song) {
         return;
     }
     console.log(serverQueue.songs);
-    const dispatcher = serverQueue.connection.playStream(ytdl(song.url))
+    const dispatcher = serverQueue.connection.playOpusStream(await ytdl(song.url))
             .on('end', reason => {
                 if (reason === 'Stream is not generating quickly enough.')
                     console.log('Song ended.');
