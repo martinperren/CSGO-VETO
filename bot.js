@@ -26,7 +26,7 @@ var webhook = process.env.WEBHOOK;
 client.on("ready", () => {
     console.log(`Bot iniciado ${client.users.size} usuarios en ${client.channels.size} canales.`);
 	var channel = client.channels.get('544082795350196226');
-  channel.send"Reiniciado.");
+  channel.send("Reiniciado.");
 	client.user.setActivity(process.env.GAME, { type: 'WATCHING' })
   .then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
   .catch(console.error);
