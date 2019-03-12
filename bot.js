@@ -29,7 +29,7 @@ var webhook = process.env.WEBHOOK;
 
 client.on("ready", () => {
     console.log(`Bot iniciado ${client.users.size} usuarios en ${client.channels.size} canales.`);
-	var channel = client.channels.get('544082795350196226');
+	var channel = client.channels.get('555060758485008396');
   channel.send("Reiniciado.");
 	client.user.setActivity(process.env.GAME, { type: 'WATCHING' })
   .then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
@@ -229,7 +229,7 @@ client.on("message", async message => {
     const serverQueue = queue.get(message.guild.id);
    
 if (message.content.includes("huevo")) {
-        message.react(client.emojis.get("537716691803570236"));
+        message.react(client.emojis.get("537716624296378399"));
     }
 	
 
