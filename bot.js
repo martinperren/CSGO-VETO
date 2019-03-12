@@ -12,7 +12,11 @@ const Util = require('discord.js');
 const YouTube = require('simple-youtube-api');
 const youtube = new YouTube(process.env.YT_API);
 const queue = new Map();
-var roles = ["Owner", "Admin", "Bunker Support"];
+
+var admin = ["Owner", "Admin", "Bunker Support"];
+var roles = ["Owner", "Admin", "Bunker Support","Mods"];
+
+
 var webhook = process.env.WEBHOOK;
 
 
@@ -239,7 +243,7 @@ if (message.content.includes("huevo")) {
 	
   
     if (message.content.startsWith("&say")){
-        if (!message.member.roles.some(r => roles.includes(r.name)))
+        if (!message.member.roles.some(r => admin.includes(r.name)))
             return 0;
         const sayMessage = args.join(" ");
         message.delete().catch(O_o => {
@@ -270,7 +274,7 @@ if (message.content.includes("huevo")) {
 	
 	
 	 if (message.content.startsWith("!big")){
-        if (!message.member.roles.some(r => roles.includes(r.name)))
+        if (!message.member.roles.some(r => admin.includes(r.name)))
             return 0;
         const sayMessage = args.join(" ");
 		 let arr = Array.from(sayMessage.toLowerCase());
@@ -447,7 +451,7 @@ ${serverQueue.songs.map(song => `**-** ${song.title}`).join('\n')}
 	 
 	 
 	if (message.content.startsWith("&uptime")){
-	 if (!message.member.roles.some(r => roles.includes(r.name)))
+	 if (!message.member.roles.some(r => roles.admin(r.name)))
             return 0;
 message.delete();
 		
