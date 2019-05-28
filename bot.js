@@ -22,7 +22,7 @@ const merge = require('merge');
 Carina.WebSocket = ws;
 
 
-
+class MixerDiscordBot{
 
 const messageStart = (channelInfo) => {
     return `Benex está en vivo en Mixer! https://mixer.com/6998977!`
@@ -83,7 +83,7 @@ const defaultOptions = {
     }
 
 
-
+}
 
 
 //mixer
@@ -130,8 +130,8 @@ client.on("guildCreate", guild => {
 
 
 const job = schedule.scheduleJob('/1 * * * * *', () => {
-	
-	subscribe();
+	var mixer = new MixerDiscordBot();
+	mixer.subscribe();
     console.log("Twitch iniciado.");
     jsonfile.readFile(configFile, (err, config) => {
         if (err) {
