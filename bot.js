@@ -12,12 +12,88 @@ const Util = require('discord.js');
 const YouTube = require('simple-youtube-api');
 const youtube = new YouTube(process.env.YT_API);
 const queue = new Map();
+var webhook = process.env.WEBHOOK;
+
+//mixer
+const fetch = require('node-fetch');
+const Carina = require('carina').Carina;
+const ws = require('ws');
+const merge = require('merge');
+Carina.WebSocket = ws;
+
+
+
+
+const messageStart = (channelInfo) => {
+    return `Benex está en vivo en Mixer! https://mixer.com/6998977!`
+};
+
+
+
+const defaultOptions = {
+    messageStart: messageStart
+};
+
+  function  ready(fn){
+        this.readyFn = fn;
+    }
+
+  function  start() {
+        this.ca = new Carina({ isBot: true }).open();
+        this.loadInfo().then(this.subscibe);
+    }
+
+   function loadInfo(){
+        const infourl = `https://mixer.com/api/v1/channels/6998977`;
+	    //const infourl = `https://mixer.com/api/v1/channels/${this.config.channelId}`;
+        return fetch(infourl).then((data) => {
+            return data.json()
+        }).then((data) => {
+            this.channelInfo = data;
+            this.readyFn();
+        });
+    }
+    function subscribe() {
+        this.ca.subscribe(`channel:6998977:update`, data => {
+            if(data.online){
+                this.notifyOnStart();
+            } else {
+                this.notifyOnEnd();
+            }
+        });
+
+    }
+
+  function  postToDiscord(message){
+        const body = {'content': message};
+        fetch(webhook, {
+            method: 'POST', headers: {
+                'Accept': 'application/json, application/xml, text/plain, text/html, *.*',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body)
+        });
+    }
+
+  function  notifyOnStart(){
+       
+            const message = this.options.messageStart(this.channelInfo);
+            this.postToDiscord(message);
+        
+    }
+
+
+
+
+
+//mixer
+
+
 
 var admin = ["Owner", "Admin", "Bunker Support"];
 var roles = ["Owner", "Admin", "Bunker Support","Mods"];
 
 
-var webhook = process.env.WEBHOOK;
 
 
 
