@@ -17,6 +17,18 @@
         }
       ]
     },
+	{
+      "id": "112234256",
+      "nickname": "Lorca",
+      "latestStream": 151050459,
+      "receivers": [
+        {
+          "nickname": "Lorca",
+          "customMessage": "Lorca está en vivo en Twitch!",
+		  "url": "https://www.twitch.tv/matilorcah"
+        }
+      ]
+    },
     {
       "id": "112234256",
       "nickname": "Benex",
