@@ -18,9 +18,9 @@
       ]
     },
 	{
-      "id": "112234256",
+      "id": "151050459",
       "nickname": "Lorca",
-      "latestStream": 151050459,
+      "latestStream":25283115264 ,
       "receivers": [
         {
           "nickname": "Lorca",
@@ -32,7 +32,7 @@
     {
       "id": "112234256",
       "nickname": "Benex",
-      "latestStream": 25283115264,
+      "latestStream": ,
       "receivers": [
         {
           "nickname": "Benex",
