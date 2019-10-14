@@ -258,6 +258,16 @@ if (message.content.includes("huevo")) {
 	
 	
 	
+	if (message.content.startsWith("&tts")){
+        if (!message.member.roles.some(r => admin.includes(r.name)))
+            return 0;
+        const sayMessage = args.join(" ");
+        message.delete().catch(O_o => {
+        });
+	 
+        message.channel.send(sayMessage, { tts: true });
+    }
+	
 	
 	// BIG 
 
