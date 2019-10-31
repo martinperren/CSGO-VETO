@@ -11,8 +11,7 @@
       "receivers": [
         {
           "nickname": "Tuber",
-          "customMessage": "Tuber está en vivo en Twitch!",
-		  "url": "https://www.twitch.tv/tubergg"
+          "customMessage": "Tuber está en vivo en Twitch!"
 		  
         }
       ]
@@ -24,8 +23,7 @@
       "receivers": [
         {
           "nickname": "Lorca",
-          "customMessage": "Lorca está en vivo en Twitch!",
-		  "url": "https://www.twitch.tv/matilorcah"
+          "customMessage": "Lorca está en vivo en Twitch!"
         }
       ]
     },
@@ -36,8 +34,7 @@
       "receivers": [
         {
           "nickname": "Benex",
-          "customMessage": "Benex está en vivo en Twitch!",
-		  "url": "https://www.twitch.tv/benex_rs"
+          "customMessage": "Benex está en vivo en Twitch!"
         }
       ]
     },
@@ -48,8 +45,7 @@
       "receivers": [
         {
           "nickname": "Matishi",
-          "customMessage": "Matishi está en vivo en Twitch!",
-		  "url": "https://www.twitch.tv/matishi"
+          "customMessage": "Matishi está en vivo en Twitch!"
         }
       ]
     },
@@ -61,8 +57,7 @@
       "receivers": [
         {
           "nickname": "Merodeador",
-          "customMessage": "Moderador está en vivo en Twitch!",
-		  "url": "https://www.twitch.tv/merodeador"
+          "customMessage": "Moderador está en vivo en Twitch!"
         }
       ]
     }, {
@@ -72,8 +67,7 @@
       "receivers": [
         {
           "nickname": "Flash",
-          "customMessage": "Flash está en vivo en Twitch!",
-		  "url": "https://www.twitch.tv/flashrockmann"
+          "customMessage": "Flash está en vivo en Twitch!"
         }
       ]
     },
@@ -84,8 +78,7 @@
       "receivers": [
         {
           "nickname": "Sntgx",
-          "customMessage": "El Cabe, si, EL CABE! está en vivo en Twitch!",
-		  "url": "https://www.twitch.tv/sntgx"
+          "customMessage": "El Cabe, si, EL CABE! está en vivo en Twitch!"
         }
       ]
     }
