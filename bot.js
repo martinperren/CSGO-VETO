@@ -46,7 +46,7 @@ client.on("guildCreate", guild => {
 	
 	client.user.setActivity(process.env.GAME, { type: 'WATCHING' })
   .then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
-  .catch(console.error);
+  .catch(console.error);481e6f1cdce19b7c236c89386d8c442c8acee1d6
 		
 });
 
