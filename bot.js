@@ -42,20 +42,6 @@ client.on("ready", () => {
 
 
 
-//  START  //  START  //  START  //  START  //  START  //  START  //  START  //  START  //  START  //  START  //  START  
-
-
-
-
-client.on("ready", () => {
-    console.log(`Bot iniciado ${client.users.size} usuarios en ${client.channels.size} canales.`);
-    var channel = client.channels.get('555060758485008396');
-    channel.send("Reiniciado.");
-    client.user.setActivity(process.env.GAME, { type: 'WATCHING' })
-    .then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
-    .catch(console.error);
-
-});
 client.on("guildCreate", guild => {
     console.log(`Nuevo guild: ${guild.name} (id: ${guild.id}). Este guild tiene ${guild.memberCount} miembros.`);
 
