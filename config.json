@@ -11,54 +11,6 @@
       "receivers": [
         {
           "nickname": "Tuber",
-          "customMessage": "Tuber está en vivo en Twitch!"
-		  
-        }
-      ]
-    },
-	{
-      "id": "151050459",
-      "nickname": "Lorca",
-      "latestStream":25283115264 ,
-      "receivers": [
-        {
-          "nickname": "Lorca",
-          "customMessage": "Lorca está en vivo en Twitch!"
-        }
-      ]
-    },
-    {
-      "id": "112234256",
-      "nickname": "Benex",
-      "latestStream":25283115264 ,
-      "receivers": [
-        {
-          "nickname": "Benex",
-          "customMessage": "Benex está en vivo en Twitch!"
-        }
-      ]
-    },
-    {
-      "id": "116571793",
-      "nickname": "Matishi",
-      "latestStream": 25283115264,
-      "receivers": [
-        {
-          "nickname": "Matishi",
-          "customMessage": "Matishi está en vivo en Twitch!"
-        }{
-  "twitchAuth": {
-    "clientID": "jceafu5cq49gyppqja6thwb8nnmhm9",
-    "apiVersion": 5
-  },
-  "streams": [
-    {
-      "id": "99625204",
-      "nickname": "Tuber",
-      "latestStream": 25283115264,
-      "receivers": [
-        {
-          "nickname": "Tuber",
           "customMessage": "Tuber está en vivo en Twitch!",
 		  "url": "https://www.twitch.tv/tubergg"
 		  
@@ -139,40 +91,4 @@
     }
   ]
 }
-      ]
-    },
-	  	  
-    {
-      "id": "193721055",
-      "nickname": "Merodeador",
-      "latestStream": 25281670208,
-      "receivers": [
-        {
-          "nickname": "Merodeador",
-          "customMessage": "Moderador está en vivo en Twitch!"
-        }
-      ]
-    }, {
-      "id": "114200215",
-      "nickname": "Flash",
-      "latestStream": 25283115264,
-      "receivers": [
-        {
-          "nickname": "Flash",
-          "customMessage": "Flash está en vivo en Twitch!"
-        }
-      ]
-    },
-     {
-      "id": "54975899",
-      "nickname": "Sntgx",
-      "latestStream": 25283115264,
-      "receivers": [
-        {
-          "nickname": "Sntgx",
-          "customMessage": "El Cabe, si, EL CABE! está en vivo en Twitch!"
-        }
-      ]
-    }
-  ]
-}
+     
