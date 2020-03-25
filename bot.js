@@ -60,7 +60,6 @@ client.on("guildCreate", guild => {
 
 
 const job = schedule.scheduleJob('/1 * * * * *', () => {
-    console.log("Twitch iniciado.");
     jsonfile.readFile(configFile, (err, config) => {
         if (err) {
             console.log(err);
