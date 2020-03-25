@@ -66,7 +66,7 @@ const job = schedule.scheduleJob('/1 * * * * *', () => {
             console.log(err);
             return;
         }
-        console.log("Config Loaded, checking streams...");
+        console.log("Config cargada, chequeo de streams...");
         for (const stream of config.streams) {
             console.log(`Check de ID ${stream.nickname}`);
             twitch(`streams/${stream.id}`, config.twitchAuth, (err, twitchResponse) => {
