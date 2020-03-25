@@ -33,44 +33,30 @@ var roles = ["Owner", "Admin", "Bunker Support","Mods"];
 
 
 client.on("ready", () => {
-    console.log(`Bot iniciado ${client.users.size} usuarios en ${client.channels.size} canales.`);
-	var channel = client.channels.get('555060758485008396');
-  channel.send("Reiniciado.");
-	client.user.setActivity(process.env.GAME, { type: 'WATCHING' })
-  .then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
-  .catch(console.error);
+    console.log("Bot iniciado");
 
-});
-client.on("guildCreate", guild => {
-    console.log(`Nuevo guild: ${guild.name} (id: ${guild.id}). Este guild tiene ${guild.memberCount} miembros.`);
-	
+
 	client.user.setActivity(process.env.GAME, { type: 'WATCHING' })
-  .then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
-  .catch(console.error);
+ .then(presence => console.log(`Activity set to ${presence.activities[0].name}`))
+    .catch(console.error);
+});
+
+
+
+client.on("guildCreate", guild => {
+   
+	
+	   client.user.setActivity(process.env.GAME, { type: 'WATCHING' })
+ .then(presence => console.log(`Activity set to ${presence.activities[0].name}`))
+    .catch(console.error);
 	
 	
-const client = new Discord.Client();
-const Client = require('node-rest-client').Client;
-const ytdl = require('ytdl-core-discord');
-const twitch = require('twitch.tv');
-const jsonfile = require('jsonfile');
-const schedule = require('node-schedule');
-const configFile = "config.json";
-const restClient = new Client();
-const ms = require("ms");
-const Util = require('discord.js');
-const YouTube = require('simple-youtube-api');
-const youtube = new YouTube(process.env.YT_API);
-const queue = new Map();
-var webhook = process.env.WEBHOOK;
+
 
 //mixer
 
 
 
-
-var admin = ["Owner", "Admin", "Bunker Support"];
-var roles = ["Owner", "Admin", "Bunker Support","Mods"];
 
 
 
@@ -328,7 +314,7 @@ if (message.content.includes("huevo")) {
 }
 	
 	
-	 if (message.content.startsWith("!big")){
+	 if (message.content.startsWith("&big")){
         if (!message.member.roles.some(r => admin.includes(r.name)))
             return 0;
         const sayMessage = args.join(" ");
