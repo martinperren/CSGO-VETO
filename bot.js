@@ -30,7 +30,7 @@ var roles = ["Owner", "Admin", "Bunker Support","Mods"];
 //  sSTART  //  START  //  START  //  START  //  START  //  START  //  START  //  START  //  START  //  START  //  START  
 
 
-
+client.login(process.env.BOT_TOKEN);
 
 client.on("ready", () => {
     console.log("Bot iniciado");
@@ -307,7 +307,7 @@ message.channel.send(salida.toString());
 
 
 });
-client.login(process.env.BOT_TOKEN);
+
 
 
 
