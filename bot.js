@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const Client = require('node-rest-client').Client;
-const ytdl = require('ytdl-core-discord');
 const twitch = require('twitch.tv');
 const jsonfile = require('jsonfile');
 const schedule = require('node-schedule');
@@ -9,8 +8,6 @@ const configFile = "config.json";
 const restClient = new Client();
 const ms = require("ms");
 const Util = require('discord.js');
-const YouTube = require('simple-youtube-api');
-const youtube = new YouTube(process.env.YT_API);
 const queue = new Map();
 var webhook = process.env.WEBHOOK;
 
@@ -43,27 +40,9 @@ client.on("ready", () => {
 
 
 
-client.on("guildCreate", guild => {
-
-	
-    client.user.setActivity(process.env.GAME, { type: 'WATCHING' })
-    .then(presence => console.log(`Activity set to ${presence.activities[0].name}`))
-    .catch(console.error);
 
 
-
-
-//mixer
-
-
-
-
-
-
-
-
-
-//  sSTART  //  START  //  START  //  START  //  START  //  START  //  START  //  START  //  START  //  START  //  START  
+//  START  //  START  //  START  //  START  //  START  //  START  //  START  //  START  //  START  //  START  //  START  
 
 
 
