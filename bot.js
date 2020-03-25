@@ -68,18 +68,18 @@ const job = schedule.scheduleJob('/1 * * * * *', () => {
         }
         console.log("Config cargada, chequeo de streams...");
         for (const stream of config.streams) {
-            console.log(`Check de ID ${stream.nickname}`);
+           // console.log(`Check de ${stream.nickname}`);
             twitch(`streams/${stream.id}`, config.twitchAuth, (err, twitchResponse) => {
                 if (err) {
                     console.log(err);
                     return;
                 }
                 if (!twitchResponse.stream) {
-                    console.log(`Twitch ID ${stream.id} (${stream.nickname}) está off.`);
+                    console.log(`Twitch ID ${stream.nickname} (${stream.id}) está off.`);
                     return;
                 }
                 if (stream.latestStream === twitchResponse.stream._id) {
-                    console.log(`Stream ya posteado. Twitch ID ${stream.id} (${stream.nickname})`);
+                    console.log(`Stream ya posteado. Twitch ID ${stream.nickname} (${stream.id})`);
                     return;
                 }
                 console.log(`Twitch ID ${stream.id} (${stream.nickname}) está stremeando!`);
