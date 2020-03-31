@@ -17,6 +17,18 @@
         }
       ]
     },
+    {
+      "id": "274681411",
+      "nickname": "GeT_0vEr_It",
+      "latestStream":25283115264 ,
+      "receivers": [
+        {
+          "nickname": "GeT_0vEr_It",
+          "customMessage": "GeT_0vEr_It está en vivo en Twitch!",
+		  "url": "https://www.twitch.tv/GeT_0vEr_It"
+        }
+      ]
+    },
 	{
       "id": "151050459",
       "nickname": "Lorca",
