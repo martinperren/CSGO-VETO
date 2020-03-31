@@ -7,7 +7,6 @@ const schedule = require('node-schedule');
 const configFile = "config.json";
 const restClient = new Client();
 const ms = require("ms");
-const Util = require('discord.js');
 const queue = new Map();
 var webhook = process.env.WEBHOOK;
 
