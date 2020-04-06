@@ -17,7 +17,7 @@ var roles = ["Owner", "Admin", "Bunker Support","Mods"];
 
 const randomWord = require('random-spanish-words');
 const hangman = require("./hangman.js");
-const prefix = "!truco"
+const prefix = "!jugar"
 
 const figure = [`
  +---+
