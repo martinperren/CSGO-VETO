@@ -77,7 +77,7 @@ const figure = [`
  =========  gameStatus
 `];
 
-
+/*
 const helpEmbed = new Discord.RichEmbed()
     .addField("Start new game", "`" + prefix + " start [custom | random]`. By default is custom. Custom means one"
         + " of the players choose the word. With random, the word is choose randomly.")
@@ -87,7 +87,7 @@ const helpEmbed = new Discord.RichEmbed()
         + " send more than one character (a word) you are guessing the whole word and if you fail, you are eliminated"
         + " from the game.")
     .setColor("#99AAB5");
-
+*/
 const runningGames = new Set();
 
 function gatherPlayersFromMessage(channel) {
@@ -362,9 +362,11 @@ client.on('message', async (msg) => {
                     msg.reply("There's already a game running on this server.");
                 }
                 break;
+                /*
             case "help":
                 msg.channel.send({ embed: helpEmbed });
                 break;
+                */
         }
     }
 });
