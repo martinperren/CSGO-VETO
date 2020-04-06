@@ -115,10 +115,19 @@ async function gatherPlayersFromReaction(message, emoji) {
         //const filter = (r) => { return true; };
         await message.awaitReactions(filter, { time: 10000 })
             .then(collected => {
-                collected.first().users.forEach((user) => {
-                    if (!user.bot) {
+                
+
+ collected.first().users.keys(a).forEach(function (user){
+    if (!user.bot) {
                         players.push(user);
                     }
+});
+
+
+                   
+               
+
+
                 });
             })
             .catch(err => reject(err));
