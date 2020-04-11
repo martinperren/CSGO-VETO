@@ -8,12 +8,9 @@
   },
   "dependencies": {
     "discord.js": "^12.0.2",
-	"ytdl-core-discord": "*",
 	"node-schedule": "^1.2.1",
     "twitch.tv": "^2.1.0",
     "jsonfile": "^3.0.0",
     "node-rest-client": "^3.1.0",
-    "simple-youtube-api": "^3.0.0",
-    "random-spanish-words":"2.0.0"
   }
 }

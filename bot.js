@@ -7,18 +7,11 @@ const schedule = require('node-schedule');
 const configFile = "config.json";
 const restClient = new Client();
 const ms = require("ms");
-const queue = new Map();
 var webhook = process.env.WEBHOOK;
 
 var admin = ["Owner", "Admin", "Bunker Support"];
 var roles = ["Owner", "Admin", "Bunker Support","Mods"];
 
-
-
-
-
-
-//  sSTART  //  START  //  START  //  START  //  START  //  START  //  START  //  START  //  START  //  START  //  START  
 
 
 client.login(process.env.BOT_TOKEN);
@@ -161,7 +154,7 @@ client.on("message", async message => {
     const argsM = message.content.split(' ');
     const searchString = argsM.slice(1).join(' ');
     const url = argsM[1] ? argsM[1].replace(/<(.+)>/g, '$1') : '';
-    const serverQueue = queue.get(message.guild.id);
+   
 
     if (message.content.includes("huevo")) {
        message.react("537716624296378399");
@@ -211,7 +204,7 @@ function isNumber(input) {
 if (message.content.startsWith("&big")){
   if (!message.member.hasPermission("BAN_MEMBERS"))
     return 0;
-const sayMessage = args.join(" ");
+const sayMessage = args.join(" ").normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 let arr = Array.from(sayMessage.toLowerCase());
 var salida = "";
 var tam = arr.length;
