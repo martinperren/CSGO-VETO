@@ -120,7 +120,7 @@ function buildWebHook(twitchResponse, receiver) {
                 }
                 ],
                 "image": {
-                    "url": `${twitchResponse.stream.preview.large+".jpg"}`
+                    "url": `${twitchResponse.stream.preview.large+`.jpg`}`
                 },
                 "thumbnail": {
                     "url": `${twitchResponse.stream.channel.logo}`
