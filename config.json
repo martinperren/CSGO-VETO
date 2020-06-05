@@ -11,7 +11,7 @@
       "receivers": [
         {
           "nickname": "Tuber",
-          "customMessage": "Tuber está en vivo en Twitch!",
+          "customMessage": "**¡Tuber está en vivo en Twitch!**",
 		  "url": "https://www.twitch.tv/tubergg"
 		  
         }
@@ -24,7 +24,7 @@
       "receivers": [
         {
           "nickname": "GeT_0vEr_It",
-          "customMessage": "GeT_0vEr_It está en vivo en Twitch!",
+          "customMessage": "**¡GeT_0vEr_It está en vivo en Twitch!**",
 		  "url": "https://www.twitch.tv/GeT_0vEr_It"
         }
       ]
@@ -36,7 +36,7 @@
       "receivers": [
         {
           "nickname": "Lorca",
-          "customMessage": "Lorca está en vivo en Twitch!",
+          "customMessage": "**¡Lorca está en vivo en Twitch!**",
 		  "url": "https://www.twitch.tv/matilorcah"
         }
       ]
@@ -48,7 +48,7 @@
       "receivers": [
         {
           "nickname": "Benex",
-          "customMessage": "Benex está en vivo en Twitch!",
+          "customMessage": "**¡Benex está en vivo en Twitch!**",
 		  "url": "https://www.twitch.tv/benex_rs"
         }
       ]
@@ -60,7 +60,7 @@
       "receivers": [
         {
           "nickname": "Matishi",
-          "customMessage": "Matishi está en vivo en Twitch!",
+          "customMessage": "**¡Matishi está en vivo en Twitch!**",
 		  "url": "https://www.twitch.tv/matishi"
         }
       ]
@@ -73,7 +73,7 @@
       "receivers": [
         {
           "nickname": "Merodeador",
-          "customMessage": "Moderador está en vivo en Twitch!",
+          "customMessage": "**¡Moderador está en vivo en Twitch!**",
 		  "url": "https://www.twitch.tv/merodeador"
         }
       ]
@@ -84,7 +84,7 @@
       "receivers": [
         {
           "nickname": "Flash",
-          "customMessage": "Flash está en vivo en Twitch!",
+          "customMessage": "**¡Flash está en vivo en Twitch!**",
 		  "url": "https://www.twitch.tv/flashrockmann"
         }
       ]
@@ -96,7 +96,7 @@
       "receivers": [
         {
           "nickname": "Sntgx",
-          "customMessage": "El Cabe, si, EL CABE! está en vivo en Twitch!",
+          "customMessage": "**¡El Cabe, si, EL CABE! está en vivo en Twitch!**",
 		  "url": "https://www.twitch.tv/sntgx"
         }
       ]

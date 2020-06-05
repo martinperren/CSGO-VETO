@@ -8,13 +8,10 @@ const configFile = "config.json";
 const restClient = new Client();
 const ms = require("ms");
 var webhook = process.env.WEBHOOK;
-
-var admin = ["Owner", "Admin", "Bunker Support"];
-var roles = ["Owner", "Admin", "Bunker Support","Mods"];
-
-
-
 client.login(process.env.BOT_TOKEN);
+
+
+
 
 client.on("ready", () => {
     console.log("Bot iniciado");
@@ -76,7 +73,7 @@ const job = schedule.scheduleJob('/1 * * * * *', () => {
                     }
                 });
                 if (!twitchResponse.stream.game) {
-                    twitchResponse.stream.game = "Not Playing";
+                    twitchResponse.stream.game = "Ninguno";
                 }
                 stream.receivers.forEach((receiver) => {
                     const args = buildWebHook(twitchResponse, receiver);
@@ -105,7 +102,7 @@ function buildWebHook(twitchResponse, receiver) {
                     "name": `${twitchResponse.stream.channel.display_name}`,
                     "icon_url": `${twitchResponse.stream.channel.logo}`
                 },
-                "title": `EN VIVO: ${twitchResponse.stream.channel.status}`,
+                "title": `${twitchResponse.stream.channel.status}`,
                 "url": `${twitchResponse.stream.channel.url}`,
                 "color": 6570404,
                 "fields": [{
@@ -114,7 +111,7 @@ function buildWebHook(twitchResponse, receiver) {
                     "inline": true
                 },
                 {
-                    "name": "Viewers",
+                    "name": "Espectadores",
                     "value": `${twitchResponse.stream.viewers}`,
                     "inline": true
                 }
