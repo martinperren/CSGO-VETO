@@ -17,6 +17,20 @@
         }
       ]
     },
+	    
+	{
+      "id": "75857141",
+      "nickname": "@",
+      "latestStream":25283115264 ,
+      "receivers": [
+        {
+          "nickname": "@",
+          "customMessage": "**¡@ está en vivo en Twitch!**",
+		  "url": "https://www.twitch.tv/tvteric"
+        }
+      ]
+    },  
+	  
     {
       "id": "274681411",
       "nickname": "GeT_0vEr_It",
